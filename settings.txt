@@ -1,0 +1,16 @@
+[Default]
+torch_seed = 0
+numpy_seed = 0
+delimiter = _
+embedding_dim = 512
+
+[market1501]
+download_dir = YOUR PATH HERE
+dataset_dir = ${download_dir}/processed
+model_format = models/%s_%s.pth
+triplet_format = datasets/%s_%s.mat
+train_path = analysis/train_%s.mat
+test_path = analysis/test_%s.mat
+evaluation_path = analysis/evaluate_%s.mat
+tensorboard_dir = runs
+
