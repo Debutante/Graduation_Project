@@ -7,10 +7,10 @@
 
 A standard, medium-sized baseline code for Person-reID (based on [pytorch](https://pytorch.org)).
 
-- **Standard.** Arrived at Rank@1:86.7280% Rank@5:94.6853% Rank@10:96.3777% mAP:67.7160% @epoch18. 
+- **Standard.** Arrived at Rank@1:86.7280% Rank@5:94.6853% Rank@10:96.3777% mAP:67.7160% @epoch16. 
 You may learn from `console.log` if you want to know about the decline of losses and errors in detail.
 
-ResNet(pretrained) @ epoch18: 
+ResNet(pretrained) @ epoch16: 
 
 |Scenes |Rank@1 | Rank@5 | Rank@10| mAP| 
 | ------ | -------- | ----- | ---- | ---- | 
@@ -56,6 +56,12 @@ Now supported:
 - Visualize Training Curves & Ranking Result(supported by [Tensorboard](https://tensorflow.google.cn/tensorboard))
 
 ## Some News
+**25 May 2020** Finish the draft.
+
+**20 May 2020** Start writing my thesis.
+
+**15 May 2020** Collect related literature for reference. 
+
 **29 April 2020** Try to improve the visualization of embeddings. The [t-SNE](https://dl.acm.org/doi/10.5555/2627435.2697068) produces a too dense embedding representation so I choose UMAP for better display effects.
 
 **28 April 2020** Find that euclidean distance computation is 100 times slower than matrix multiplication. That really surprises me. So I replace all the euclidean distance with normalization and matrix computation, and it saves maybe 3 minutes running time on CPU.
@@ -293,7 +299,7 @@ dictionary = {
 }
 ```
 
-##Related-Repos
+## Related-Repos
 1. This README is also in the manner of the README in [Person_reID_baseline_pytorch](https://github.com/layumi/Person_reID_baseline_pytorch) ![GitHub stars](https://img.shields.io/github/stars/layumi/Person_reID_baseline_pytorch.svg?style=flat&label=Star)
 2. Use only 50 lines to train on many ReID datasets and get decent results in [Torchreid: Deep learning person re-identification in PyTorch](https://github.com/KaiyangZhou/deep-person-reid) ![GitHub stars](https://img.shields.io/github/stars/KaiyangZhou/deep-person-reid.svg?style=flat&label=Star)
 3. Another advanced library for ReID in [Open source person re-identification library in python](https://github.com/Cysu/open-reid) ![GitHub stars](https://img.shields.io/github/stars/Cysu/open-reid.svg?style=flat&label=Star)
